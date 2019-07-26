@@ -60,7 +60,7 @@ def test_update_hand():
     expected_hand1 = {'v':1, 'n':1, 'l':1}
     expected_hand2 = {'e':0, 'v':1, 'n':1, 'i':0, 'l':1}
     if hand2 != expected_hand1 and hand2 != expected_hand2:
-        print("FAILURE: test_update_hand('"+ word +"', " + str(handOrig) + ")")        
+        print("FAILURE: test_update_hand('"+ word +"', " + str(handOrig) + ")")
         print("\tReturned: ", hand2, "\n\t-- but expected:", expected_hand1, "or", expected_hand2)
 
         return # exit function
@@ -141,7 +141,7 @@ def test_is_valid_word(word_list):
         print("FAILURE: test_is_valid_word()")
         print("\tExpected False, but got True for word: '" + word + "' and hand:", hand)
 
-        failure = True        
+        failure = True
 
     # test 3
     hand = {'n': 1, 'h': 1, 'o': 1, 'y': 1, 'd':1, 'w':1, 'e': 2}
@@ -151,7 +151,7 @@ def test_is_valid_word(word_list):
         print("FAILURE: test_is_valid_word()")
         print("\tExpected True, but got False for word: '"+ word +"' and hand:", hand)
 
-        failure = True                        
+        failure = True
 
     # test 4
     hand = {'r': 1, 'a': 3, 'p': 2, 't': 1, 'u':2}
@@ -243,7 +243,7 @@ def test_wildcard(word_list):
             print("FAILURE: test_get_word_score() with wildcards")
             print("\tExpected", words[(word, n)], "points but got '" + \
                   str(score) + "' for word '" + word + "', n=" + str(n))
-            failure=True      
+            failure = True
 
     if not failure:
         print("SUCCESS: test_wildcard()")
